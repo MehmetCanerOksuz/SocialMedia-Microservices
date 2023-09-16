@@ -51,4 +51,5 @@
     SpringFramework vs SpringBoot?
     SOLID prensipleri nelerdir?
     RestAPI nedir? RESTful arch nedir?
+    
 
