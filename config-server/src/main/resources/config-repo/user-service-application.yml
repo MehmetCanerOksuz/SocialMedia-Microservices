@@ -1,0 +1,45 @@
+server:
+  port: 7072
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: user
+    password: 123456789
+
+  zipkin:
+    enabled: true
+    base-url: http://localhost:9411
+    service:
+      name: user-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: java10user
+      password: root
+      database: userDb
+
+jwt:
+  secretKey: ${java10secretkey}
+  issuer: ${java10issuer}
+rabbitmq:
+  register-queue: register-queue
+  activation-queue: queue-activation
+  register-elastic-queue: register-elastic-queue
+  register-elastic-binding: register-elastic-binding
+  user-exchange: exchange-user
+redis:
+  host: localhost
+  port: 6379
+
+logging:
+  level:
+    root: info
+  file:
+    name: "C:/java10-workspace/log/user.log"
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
+feign:
+  auth: http://localhost:7071/api/v1/auth

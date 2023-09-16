@@ -1,0 +1,19 @@
+server:
+  port: 8889
+spring:
+  zipkin:
+    enabled: true
+    base-url: http://10.108.5.8:9411
+    service:
+      name: git-config-service
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: ${java10-git-uri}
+          default-label: main
+          skip-ssl-validation: true
+          username: ${java10-git-username}
+          password: ${java10-git-password}

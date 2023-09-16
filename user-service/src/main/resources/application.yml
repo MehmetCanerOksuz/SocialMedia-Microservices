@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      uri: ${configserver_url}
+  config:
+    import: "configserver:"
+  application:
+    name: user-service-application
+
